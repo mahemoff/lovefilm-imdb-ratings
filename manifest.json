@@ -1,16 +1,22 @@
 {
     "name": "LoveFilm IMDB ratings",
     "version": "1.0",
-    "manifest_version": 1,
+    "manifest_version": 2,
     "description": "Load IMDB ratings into LoveFilm listing pages",
     "content_scripts": [
         {
-            "matches": ["http://www.lovefilm.com/browse/film/watch-online/*"],
+            "matches": [
+              "http://www.lovefilm.com/browse/film/watch-online/*",
+              "http://www.lovefilm.com/c/*"
+             ],
             "js": ["jquery.js", "main.js"]
         }
     ],
     "permissions": [
         "http://www.lovefilm.com/browse/film/watch-online/*",
-        "http://www.deanclatworthy.com/imdb/*"
+        "http://www.lovefilm.com/browse/film/watch-online/*",
+        "http://www.lovefilm.com/c/*",
+        "http://www.deanclatworthy.com/imdb/*",
+        "http://*/*"
     ]
 }
